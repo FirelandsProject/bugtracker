@@ -1,0 +1,126 @@
+name: Reporte de errores en español
+description: Crea un informe de errores para ayudarnos a mejorar.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por dedicar su tiempo a rellenar un informe de error. Recuerde rellenar todos los campos, incluido el título. Una cuestión que no se rellene correctamente se cerrará.
+  - type: dropdown
+    id: client
+    attributes:
+      label: ¿Con qué cliente juegas?
+      options:
+      - enGB
+      - enUS
+      - deDE
+      - esES
+      - esMX
+      - frFR
+      - ruRU
+      - other
+    validations:
+      required: true
+  - type: dropdown
+    id: faction
+    attributes:
+      label: Faction
+      options:
+      - Alianza
+      - Horda
+      - Ambos
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Comportamiento actual
+      description: |
+        Describe el fallo con detalle. Base de datos para enlazar hechizos, NPCs, misiones, etc.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamiento esperado Blizzlike
+      description: |
+        Describe cómo debería funcionar sin el bug. Enlaza con pruebas si es posible, como vídeos de YouTube o comentarios de WoWHead de la época.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: |
+        AVISO: incluye las fuentes en tu informe de errores que sean relevantes para la versión del juego 4.3.4, cerraremos cualquier error como "X debería cambiarse por Y" informado sin fuentes.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Pasos para reproducir el problema
+      description: |
+        Describa con precisión cómo reproducir el error para que podamos solucionarlo o confirmar su existencia:
+        - ¿Qué comandos utilizar? ¿A qué NPC teletransportarse?
+        - ¿Es necesario tener banderas de depuración en Cmake?
+        - ¿Es necesario mirar la consola mientras se produce el fallo?
+        - Otros pasos
+        - Utiliza los comandos del juego para identificar el GUID único de un mineral/hierba/npc: .npc info / .gobj near
+      placeholder: |
+        1. 
+        2. 
+        3. 
+        4.
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Notas adicionales
+      description: |
+        Cualquier información que pueda ayudar a los desarrolladores a identificar y solucionar el problema debe ponerse aquí.
+        Ejemplos:
+        Enlaces a objetos/NPCs/misiones.
+      placeholder: |
+        None
+    validations:
+      required: false
+  - type: textarea
+    id: commit
+    attributes:
+      label: FC rev. hash/commit
+      value: |
+        https://github.com/FirelandsProject/firelands-cata/commit/6c8b4fd4203d099c0020cf24f6c30c9ff75e6c59
+    validations:
+      required: true
+  - type: textarea
+    id: os
+    attributes:
+      label: Sistema operativo
+      value: |
+        Debian 11
+    validations:
+      required: true
+  - type: textarea
+    id: modules
+    attributes:
+      label: Módulos
+      value: |
+        None
+    validations:
+      required: false
+  - type: textarea
+    id: customizations
+    attributes:
+      label: Personalizaciones
+      value: |
+        None
+    validations:
+      required: false
+  - type: textarea
+    id: server
+    attributes:
+      label: Servidor
+      value: |
+        Firelands
+    validations:
+      required: false
