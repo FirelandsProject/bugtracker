@@ -47,11 +47,11 @@ body:
     validations:
       required: true
   - type: textarea
-    id: source
+    id: link
     attributes:
-      label: Source
+      label: Enlaces
       description: |
-        AVISO: incluye las fuentes en tu informe de errores que sean relevantes para la versión del juego 4.3.4, cerraremos cualquier error como "X debería cambiarse por Y" informado sin fuentes.
+        Todos los enlaces que puedas conseguir. Quest, NPC, spells, créditos, e.t.c
     validations:
       required: true
   - type: textarea
@@ -59,31 +59,14 @@ body:
     attributes:
       label: Pasos para reproducir el problema
       description: |
-        Describa con precisión cómo reproducir el error para que podamos solucionarlo o confirmar su existencia:
-        - ¿Qué comandos utilizar? ¿A qué NPC teletransportarse?
-        - ¿Es necesario tener banderas de depuración en Cmake?
-        - ¿Es necesario mirar la consola mientras se produce el fallo?
-        - Otros pasos
-        - Utiliza los comandos del juego para identificar el GUID único de un mineral/hierba/npc: .npc info / .gobj near
-      placeholder: |
+        ¿Cómo podríamos replicar el error? ¿Qué pasos deberíamos de seguir?
+      value: |
         1. 
         2. 
         3. 
         4.
     validations:
       required: true
-  - type: textarea
-    id: extra
-    attributes:
-      label: Notas adicionales
-      description: |
-        Cualquier información que pueda ayudar a los desarrolladores a identificar y solucionar el problema debe ponerse aquí.
-        Ejemplos:
-        Enlaces a objetos/NPCs/misiones.
-      placeholder: |
-        None
-    validations:
-      required: false
   - type: textarea
     id: commit
     attributes:
@@ -100,22 +83,6 @@ body:
         Debian 11
     validations:
       required: true
-  - type: textarea
-    id: modules
-    attributes:
-      label: Módulos
-      value: |
-        None
-    validations:
-      required: false
-  - type: textarea
-    id: customizations
-    attributes:
-      label: Personalizaciones
-      value: |
-        None
-    validations:
-      required: false
   - type: textarea
     id: server
     attributes:
