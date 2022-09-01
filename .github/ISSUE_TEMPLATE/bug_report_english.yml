@@ -49,9 +49,9 @@ body:
   - type: textarea
     id: source
     attributes:
-      label: Source
+      label: Source / Links
       description: |
-        HEADS UP: include sources in your bug report which are relevant to the 3.3.5a game version, we will close any bug like "X should be changed to Y" reported without sources.
+        All the links you can get. Quest, NPC, spells, credits, e.t.c.
     validations:
       required: true
   - type: textarea
@@ -59,31 +59,14 @@ body:
     attributes:
       label: Steps to reproduce the problem
       description: |
-        Describe precisely how to reproduce the bug so we can fix it or confirm its existence:
-        - Which commands to use? Which NPC to teleport to?
-        - Do we need to have debug flags on Cmake?
-        - Do we need to look at the console while the bug happens?
-        - Other steps
-        - Use the ingame commands to identify the unique GUID of an ore/herb/npc: .npc info  /  .gobj near
-      placeholder: |
+        How could we replicate the error? What steps should we follow?
+      value: |
         1. 
         2. 
         3. 
         4.
     validations:
       required: true
-  - type: textarea
-    id: extra
-    attributes:
-      label: Extra Notes
-      description: |
-        Any information that can help the developers to identify and fix the issue should be put here.
-        Examples:
-        Links to items/NPCs/quests from https://wowgaming.altervista.org/aowow/
-      placeholder: |
-        None
-    validations:
-      required: false
   - type: textarea
     id: commit
     attributes:
@@ -100,22 +83,6 @@ body:
         Debian 11
     validations:
       required: true
-  - type: textarea
-    id: modules
-    attributes:
-      label: Modules
-      value: |
-        None
-    validations:
-      required: false
-  - type: textarea
-    id: customizations
-    attributes:
-      label: Customizations
-      value: |
-        None
-    validations:
-      required: false
   - type: textarea
     id: server
     attributes:
